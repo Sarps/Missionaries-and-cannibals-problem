@@ -1,0 +1,102 @@
+* {
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.node circle {
+	fill: #fff;
+	stroke: steelblue;
+	stroke-width: 3px;
+	cursor: pointer;
+}
+ 
+.node text { font: 12px sans-serif; }
+ 
+.link {
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 2px;
+}
+
+#treeview {
+	height: 100vh;
+	max-height: 100vh;
+}
+
+#slideshow {
+	position: relative;
+	height: 100vh;
+	max-height: 100vh;
+	background-image: url('../images/river.gif');
+	background-size: cover;
+	padding: 0;
+}
+
+.bank {
+	position: absolute;
+	background-color: wheat;
+	height: 100vh;
+	background-image: url('../images/road.jpg');
+	background-size: contain;
+	z-index: 1000;
+}
+
+.left {
+	left: 0
+}
+
+.right {
+	right: 0;
+}
+
+.action {
+	position: relative;
+	height: 60px;
+	border: 1px solid #fff;
+	padding: 0;
+}
+
+.action > img {
+	position: absolute;
+	height: 100%;
+	left: 100%;
+	animation: wobble 10s linear;
+	margin-left: -18px;
+    margin-right: -18px;
+}
+
+.action:nth-of-type(2n) {
+	transform: rotate(180deg)
+}
+
+@keyframes wobble {
+	0% {
+		height: 95%;
+		left: 0%;
+	}
+
+	20% {
+		height: 100%;
+	}
+
+	40% {
+		height: 95%;
+	}
+
+	60% {
+		height: 100%;
+	}
+
+	80% {
+		height: 95%;
+	}
+
+	100% {
+		height: 100%;
+		left: 100%;
+	}
+}
